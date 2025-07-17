@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#canvas1 {
+    width: 80%;
+    border: 5px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Creepster', cursive;
+}
+
+#start_menu, #victory_menu, #loss_menu, #player, #enemy_wasabi, #enemy_soup, #enemy_soup_big, #enemy_chopsticks, #wasabi_poof, #boom, #fire, #background0, #background1, #background2, #background3, #lives, #wasabi_meter_background, #wasabi_meter {
+    display: none;
+}
