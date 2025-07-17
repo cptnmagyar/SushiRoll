@@ -2,7 +2,7 @@ import { Player } from 'https://cptnmagyar.github.io/SushiRoll//player.js';
 import { InputHandler } from 'https://cptnmagyar.github.io/SushiRoll//input.js';
 import { Background } from 'https://cptnmagyar.github.io/SushiRoll//background.js';
 import { WasabiEnemy, GroundEnemy, GroundEnemyBig, ClimbingEnemy } from 'https://cptnmagyar.github.io/SushiRoll//enemy.js';
-import { UI } from 'https://cptnmagyar.github.io/SushiRoll//ui.js';
+import { UI } from 'https://cptnmagyar.github.io/SushiRoll//userInterface.js';
 
 
 window.addEventListener('load', function(){
