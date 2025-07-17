@@ -1,6 +1,6 @@
-import { Sitting, Running, Jumping, Falling, Rolling, Hit, Bouncing } from "/playerState.js";
-import { CollisionAnimation } from "/collisionAnimation.js";
-import { FloatingMessage } from "/floatingMessage.js";
+import { Sitting, Running, Jumping, Falling, Rolling, Hit, Bouncing } from "https://cptnmagyar.github.io/SushiRoll//playerState.js";
+import { CollisionAnimation } from "https://cptnmagyar.github.io/SushiRoll//collisionAnimation.js";
+import { FloatingMessage } from "https://cptnmagyar.github.io/SushiRoll//floatingMessage.js";
 
 export class Player {
     constructor(game){

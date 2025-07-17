@@ -1,4 +1,4 @@
-import { Dust, Fire, Splash } from "/particles.js";
+import { Dust, Fire } from "https://cptnmagyar.github.io/SushiRoll//particles.js";
 
 export const states = {
     SITTING: 0,

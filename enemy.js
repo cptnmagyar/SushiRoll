@@ -1,4 +1,4 @@
-import { EnemyFire } from "/particles.js";
+import { EnemyFire } from "https://cptnmagyar.github.io/SushiRoll//particles.js";
 
 class Enemy {
     constructor(){

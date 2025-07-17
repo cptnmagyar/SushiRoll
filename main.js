@@ -1,8 +1,8 @@
-import { Player } from '/player.js';
-import { InputHandler } from '/input.js';
-import { Background } from '/background.js';
-import { WasabiEnemy, GroundEnemy, GroundEnemyBig, ClimbingEnemy } from '/enemy.js';
-import { UI } from '/ui.js';
+import { Player } from 'https://cptnmagyar.github.io/SushiRoll//player.js';
+import { InputHandler } from 'https://cptnmagyar.github.io/SushiRoll//input.js';
+import { Background } from 'https://cptnmagyar.github.io/SushiRoll//background.js';
+import { WasabiEnemy, GroundEnemy, GroundEnemyBig, ClimbingEnemy } from 'https://cptnmagyar.github.io/SushiRoll//enemy.js';
+import { UI } from 'https://cptnmagyar.github.io/SushiRoll//ui.js';
 
 
 window.addEventListener('load', function(){
