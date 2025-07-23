@@ -1,8 +1,13 @@
+// Coty Reid Kovach - M25W0711
+// Depending on the Enemy's Type
+// creates an animated "poof" effect
+// This effect is centered on the enemy
+// and called in Player.js during collision detection
 export class CollisionAnimation{
     constructor(game,enemy){
         this.game = game;
         this.enemy = enemy;
-        this.image = boom;
+        this.image = poof;
         this.spriteWidth = 100;
         this.spriteHeight = 90;
         this.sizeModifier = Math.random() + 0.5;
@@ -12,28 +17,36 @@ export class CollisionAnimation{
         this.y = (this.enemy.y + enemy.height * 0.5) - this.height * 0.5;
         this.frameX = 0;
         this.maxFrame = 4;
-        this.markedForDeletion = false;
+
+        this.delete = false;
+
         this.fps = Math.random() * 10 + 5;
         this.frameInterval = 1000/this.fps;
         this.frameTimer = 0;
     }
+    
     draw(context){
         if (this.enemy.type == "Chopsticks"){
             return;
         }
+
         if (this.enemy.type == "Wasabi"){
             this.image = wasabi_poof;
         }
+        
         context.drawImage(this.image, this.frameX * this.spriteWidth, 0, this.spriteWidth, this.spriteHeight, this.x, this.y, this.width, this.height);
     }
+    
     update(deltaTime){
         this.x -= this.game.speed;
+
         if (this.frameTimer > this.frameInterval) {
             this.frameX++;
             this.frameTimer = 0;
         } else {
             this.frameTimer += deltaTime;
         }
-        if (this.frameX > this.maxFrame) this.markedForDeletion = true;
+
+        if (this.frameX > this.maxFrame) this.delete = true;
     }
 }

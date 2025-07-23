@@ -1,22 +1,30 @@
-export class UI {
+// Coty Reid Kovach - M25W0711
+// Stores information related to the UI in the game
+// The main.js provides the game class to this in order to
+// provide the necessary values used here to display on screen
+// such as the Sushi's Lives, Wasabi Amount, and various Menus
+export class UserInterface {
     constructor(game){
         this.game = game;
         this.fontSize = 30;
         this.fontFamily = 'Creepster';
+
         this.livesImage = lives;
         this.wasabiMeterImage = wasabi_meter;
+
         this.startMenu = start_menu;
         this.victoryMenu = victory_menu;
         this.lossMenu = loss_menu;
+
         this.wasabiMeterBackgroundImage = wasabi_meter_background;
         this.wasabiMeterSizeScaling = 5;
         this.wasabiMeterOffsetScaling = -0.075;
     }
+
     draw(context){
         context.save();
         context.font = this.fontSize + 'px ' + this.fontFamily;
         context.textAlign = 'left';
-        // score
         context.shadowOffsetX = 4;
         context.shadowOffsetY = 4;
         context.shadowBlur = 0;
@@ -65,7 +73,7 @@ export class UI {
             context.drawImage(this.startMenu, 0, 0, 1200, 575)
         }
 
-        if (this.game.gameOver == true){
+        if (this.game.gameOver){
             if (this.game.wasabi >= this.game.wasabiWinCount) {
                 context.drawImage(this.victoryMenu, 0, 0, 1200, 575)
             }

@@ -1,8 +1,16 @@
+// Coty Reid Kovach - M25W0711
+// Handles the user input in order to change the Player State
+// W or Arrow Up Key to Jump
+// A or Arrow Left Key for Backward
+// D or Arrow Right Key for Forward
+// Space or Enter for Wasabi Mode
+// This is accessed in Main.js
 export class InputHandler {
     constructor(game){
         this.game = game;
         this.keys = [];
-        window.addEventListener('keydown', (e) => {
+
+    window.addEventListener('keydown', (e) => {
             if ((   e.key === 'w' ||
                     e.key === 'ArrowUp' ||
                     e.key === 'a' ||
@@ -13,9 +21,10 @@ export class InputHandler {
                     e.key === 'Enter'
                 ) && this.keys.indexOf(e.key) === -1 && this.game.gameStart){
                 this.keys.push(e.key);
-            } else if (e.key === 'b') this.game.debug = !this.game.debug;
+            }
         });
-        window.addEventListener('keyup', (e) => {
+        
+    window.addEventListener('keyup', (e) => {
             if ((   e.key === 'w' ||
                     e.key === 'ArrowUp' ||
                     e.key === 'a' ||

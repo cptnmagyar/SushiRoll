@@ -1,3 +1,8 @@
+// Coty Reid Kovach - M25W0711
+// Creates a layered "Parallax" background
+// Each layer is defined and assigned a separate image
+// Main.js continously calls the background update function
+// to update the Background layers positions and redraws them
 class Layer {
     constructor(game, width, height, speedModifier, image){
         this.game = game;
@@ -8,10 +13,12 @@ class Layer {
         this.x = 0;
         this.y = 0;
     }
+
     update(){
         if (this.x < -this.width) this.x = 0;
         else this.x -= this.game.speed * this.speedModifier;
     }
+
     draw(context){
         context.drawImage(this.image, this.x, this.y, this.width, this.height);
         context.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
@@ -36,13 +43,14 @@ export class Background {
 
         this.backgroundLayers = [this.background_Shop, this.background_Customers,this.background_Sushi,  this.background_Belt];
     }
+    
     update(){
             this.backgroundLayers.forEach(layer => {
                 layer.update();
             });
     }
+
     draw(context){
-        
             this.backgroundLayers.forEach(layer => {
                 layer.draw(context);
             });
